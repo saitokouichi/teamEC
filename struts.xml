@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 開発者モード(デバッグしたい時にはコメント外してください。ユーザーのエラーページが無効にできます) -->
+	<!-- <constant name="struts.devMode" value="true" /> -->
+	<package name="com.internousdev.hibiscus.action" extends="struts-default">
+
+	<!-- ユーザー登録機能 -->
+		<action name="CreateUserAction" class="com.internousdev.hibiscus.action.CreateUserAction" method="execute">
+			<result name="success">createUser.jsp</result>
+			<result name="error">home.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+		<action name="CreateUserConfirmAction" class="com.internousdev.hibiscus.action.CreateUserConfirmAction" method="execute">
+			<result name="success">createUserConfirm.jsp</result>
+			<result name="error">createUser.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+		<action name="CreateUserCompleteAction" class="com.internousdev.hibiscus.action.CreateUserCompleteAction" method="execute">
+			<result name="success">createUserComplete.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="settlement">settlementConfirm.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+	<!-- ログイン機能 -->
+		<action name="LoginAction" class="com.internousdev.hibiscus.action.LoginAction" method="execute">
+			<result name="success">home.jsp</result>
+			<result name="settlement">settlementConfirm.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+		<action name="GoLoginAction" class="com.internousdev.hibiscus.action.GoLoginAction" method="execute">
+			<result name="success">login.jsp</result>
+			<result name="error">home.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+	<!-- パスワード再設定機能 -->
+		<action name="ResetPasswordAction" class="com.internousdev.hibiscus.action.ResetPasswordAction" method="execute">
+			<result name="success">resetPassword.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+		<action name="ResetPasswordConfirmAction" class="com.internousdev.hibiscus.action.ResetPasswordConfirmAction" method="execute">
+			<result name="success">resetPasswordConfirm.jsp</result>
+			<result name="error">resetPassword.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+		<action name="ResetPasswordCompleteAction" class="com.internousdev.hibiscus.action.ResetPasswordCompleteAction" method="execute">
+			<result name="success">resetPasswordComplete.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+	<!-- 商品一覧機能 -->
+		<action name="ProductListAction" class="com.internousdev.hibiscus.action.ProductListAction" method="execute">
+			<result name="success">productList.jsp</result>
+			<result name="error">home.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+	<!-- 商品詳細機能 -->
+		<action name="ProductDetailsAction" class="com.internousdev.hibiscus.action.ProductDetailsAction" method="execute">
+			<result name="success">productDetails.jsp</result>
+			<result name="error">productList.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+		<action name="HomeAction" class="com.internousdev.hibiscus.action.HomeAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+
+	<!-- 商品検索機能 -->
+		<action name="SearchItemAction" class="com.internousdev.hibiscus.action.SearchItemAction" method="execute">
+			<result name="success">productList.jsp</result>
+			<result name="error">productList.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+	<!-- カート機能 -->
+		<action name="AddCartAction" class="com.internousdev.hibiscus.action.AddCartAction" method="execute">
+			<result name="success">cart.jsp</result>
+			<result name="error">productList.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+		<action name="CartAction" class="com.internousdev.hibiscus.action.CartAction" method="execute">
+			<result name="success">cart.jsp</result>
+			<result name="error">home.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+		<action name="DeleteCartAction" class="com.internousdev.hibiscus.action.DeleteCartAction" method="execute">
+			<result name="success">cart.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+	<!-- 宛先情報選択 -->
+		<action name="SettlementConfirmAction" class="com.internousdev.hibiscus.action.SettlementConfirmAction" method="execute">
+			<result name="success">settlementConfirm.jsp</result>
+			<result name="error">cart.jsp</result>
+			<result name="login">login.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+	<!-- 宛先情報登録機能 -->
+		<action name="CreateDestinationAction" class="com.internousdev.hibiscus.action.CreateDestinationAction" method="execute">
+			<result name="success">createDestination.jsp</result>
+			<result name="error">home.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+		<action name="CreateDestinationConfirmAction" class="com.internousdev.hibiscus.action.CreateDestinationConfirmAction" method="execute">
+			<result name="success">createDestinationConfirm.jsp</result>
+			<result name="error">createDestination.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+		<action name="CreateDestinationCompleteAction" class="com.internousdev.hibiscus.action.CreateDestinationCompleteAction" method="execute">
+			<result name="success">createDestinationComplete.jsp</result>
+			<result name="error">createDestination.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+	<!-- 決済完了機能 -->
+		<action name="SettlementCompleteAction" class="com.internousdev.hibiscus.action.SettlementCompleteAction">
+			<result name="success">settlementComplete.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+	<!-- マイページ機能 -->
+		<action name="MyPageAction" class="com.internousdev.hibiscus.action.MyPageAction" method="execute">
+			<result name="success">mypage.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+	<!-- 商品購入履歴機能 -->
+		<action name="PurchaseHistoryAction" class="com.internousdev.hibiscus.action.PurchaseHistoryAction" method="execute">
+			<result name="success">purchaseHistory.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+		<action name="DeletePurchaseHistoryAction" class="com.internousdev.hibiscus.action.DeletePurchaseHistoryAction" method="execute">
+			<result name="success">purchaseHistory.jsp</result>
+			<result name="error">home.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+	<!-- ログアウト機能 -->
+		<action name="LogoutAction" class="com.internousdev.hibiscus.action.LogoutAction"  method="execute">
+			<result name="success">index.jsp</result>
+			<result name="error">error.jsp</result>
+			<result name="session">error.jsp</result>
+		</action>
+
+	</package>
+</struts>

@@ -1,0 +1,46 @@
+table{
+	width:90%;
+	margin:0 auto;
+	margin-top:4%;
+	padding:0;
+	border-top:1px solid #DDDDDD;
+	border-left:1px solid #DDDDDD;
+	border-right:1px solid #DDDDDD;
+	border-collapse: collapse;
+}
+#form{
+text-align:center;
+margin:0.3%;
+}
+
+td{
+	text-align:left;
+}
+table tr td{
+	clear:both;
+	border-bottom:1px solid #DDDDDD;
+	line-height:45px;
+}
+table tr #title{
+	text-align:left;
+	width:20%;
+	font-size:1.2vw;
+	font-weight:bold;
+	color:white;
+	background-color:deeppink;
+	margin:0 auto;
+	padding-top:0;
+	padding-left:0.5%;
+}
+
+.formInput{
+	width:95%;
+	margin:2%;
+	font-size:1.2vw;
+	padding-left:0.5%;
+}
+
+input[type="radio"]{
+	margin-left:5%;
+}
+
